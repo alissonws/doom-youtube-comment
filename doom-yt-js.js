@@ -1,6 +1,7 @@
 (function() {
   // 1. Configuração do container
-  const container = document.querySelector('ytd-expander#expander #content');
+  const container = document.querySelector('#user-store-index-tabs-wrapper .container');
+
   if (!container) {
     console.error("Container de comentário não encontrado!");
     return;
@@ -22,6 +23,9 @@
   container.style.padding = '5px';
   container.style.display = 'block';
 
+const page = document.querySelector('body');
+page.style.overflow = 'auto';
+
   // 2. Ajusta dinamicamente o tamanho do container conforme a janela do usuário
   const maxGameWidth = 800;
   const maxGameHeight = 600;
@@ -37,8 +41,8 @@
   }
 
   // 3. Define a resolução em caracteres, baseado em uma estimativa do tamanho de cada caractere
-  const charWidth = 8;   // largura estimada de um caractere (em pixels)
-  const charHeight = 16; // altura estimada de um caractere (em pixels)
+  const charWidth = 16;   // largura estimada de um caractere (em pixels)
+  const charHeight = 32; // altura estimada de um caractere (em pixels)
   const screenWidth = Math.floor(gameWidth / charWidth);
   const screenHeight = Math.floor(gameHeight / charHeight);
 
