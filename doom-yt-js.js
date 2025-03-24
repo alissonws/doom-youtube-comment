@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', function () {
 (function() {
   // 1. Configuração do container
   const container = document.querySelector('#user-store-index-tabs-wrapper .container');
@@ -228,3 +229,4 @@ page.style.overflow = 'auto';
   // Inicia o loop do jogo
   gameLoop();
 })();
+});
